@@ -48,7 +48,8 @@ body {
 
   background: #0f172a;
 
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 1000;
 }
 
@@ -58,7 +59,7 @@ body {
 ================================ */
 
 .logo {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
 }
 
@@ -82,7 +83,7 @@ body {
 .nav-links a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
 
   transition: color 0.3s ease;
 }
@@ -312,6 +313,10 @@ body {
    HERO SECTION
 ================================ */
 
+/* ================================
+   HERO SECTION
+================================ */
+
 .hero {
   width: 100%;
   min-height: calc(100vh - 80px);
@@ -322,9 +327,16 @@ body {
   justify-content: space-between;
   gap: 60px;
 
-  background: #0f172a;
-}
+  /* Tech black texture background */
+  background-color: #0f172a;
+  background-image: url("/background texture.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
+  position: relative;
+  overflow: hidden;
+}
 
 /* ================================
    HERO CONTENT
@@ -336,7 +348,7 @@ body {
 }
 
 .hero-intro {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 
   color: #5bd1d7;
 
@@ -349,7 +361,7 @@ body {
 .hero-content h1 {
   margin-bottom: 10px;
 
-  font-size: clamp(48px, 6vw, 78px);
+  font-size: clamp(50px, 6vw, 80px);
   line-height: 1.05;
   font-weight: 700;
 
@@ -361,9 +373,9 @@ body {
 }
 
 .hero-content h2 {
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 
-  font-size: clamp(25px, 3vw, 38px);
+  font-size: clamp(27px, 3vw, 40px);
   font-weight: 600;
 
   color: #ffffff;
@@ -377,7 +389,7 @@ body {
 
   color: #cbd5e1;
 
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.8;
 }
 
@@ -539,7 +551,20 @@ body {
 
   display: block;
 }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
 
+  background: rgba(15, 23, 42, 0.35);
+
+  pointer-events: none;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
 
 /* ================================
    TABLET
@@ -550,6 +575,8 @@ body {
   .hero {
     padding: 60px 5%;
     gap: 35px;
+    background-size: cover;
+    background-position: center;
   }
 
   .hero-image {
@@ -601,6 +628,9 @@ body {
     text-align: center;
 
     gap: 45px;
+
+    background-size: cover;
+    background-position: center top;
   }
 
 
@@ -625,6 +655,7 @@ body {
 
   .hero-intro {
     font-size: 16px;
+    margin-left: 5px;
   }
 
   .hero-content h1 {
@@ -1347,6 +1378,9 @@ body {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .skills-track {
+    animation-duration: 18s;
+  }
 
 }
 
@@ -1360,6 +1394,13 @@ body {
   .skills {
     padding: 80px 5%;
   }
+  @media (max-width: 600px) {
+
+  .skills-track {
+    animation-duration: 18s;
+  }
+
+}
 
   .skills-heading {
     margin-bottom: 45px;
@@ -2846,6 +2887,7 @@ body {
     padding: 25px;
   }
 
+  
 }
 
 /* ================================
@@ -2891,6 +2933,17 @@ body {
 
 .service-card {
   min-height: 330px;
+}
+
+.services .skills-track {
+  animation-duration: 25s;
+}
+@media (max-width: 600px) {
+
+  .services .skills-track {
+    animation-duration: 18s;
+  }
+
 }
 
 
@@ -3140,4 +3193,111 @@ body {
     font-size: 13px;
   }
 
+}
+
+/* ================================
+   PC TEXT SIZE ONLY
+================================ */
+
+@media (min-width: 1001px) {
+
+  /* Section subtitles */
+  .section-subtitle {
+    font-size: 17px;
+  }
+
+  /* About */
+  .about-text {
+    font-size: 17px;
+  }
+
+  .highlight-card p {
+    font-size: 15px;
+  }
+
+  /* Skills */
+  .skills-heading > p:last-child {
+    font-size: 17px;
+  }
+
+  .skill-card p {
+    font-size: 15px;
+  }
+
+  .skill-level {
+    font-size: 12px;
+  }
+
+  /* Projects */
+  .projects-heading > p:last-child {
+    font-size: 17px;
+  }
+
+  .project-description {
+    font-size: 15px;
+  }
+
+  .project-technologies span {
+    font-size: 12px;
+  }
+
+  .project-link {
+    font-size: 14px;
+  }
+
+  /* Education & Experience */
+  .education-experience-heading > p:last-child {
+    font-size: 17px;
+  }
+
+  .journey-subtitle {
+    font-size: 13px;
+  }
+
+  .journey-card-content p {
+    font-size: 15px;
+  }
+
+  .journey-link {
+    font-size: 14px;
+  }
+
+  /* Contact */
+  .contact-heading > p:last-child {
+    font-size: 17px;
+  }
+
+  .contact-info > p {
+    font-size: 16px;
+  }
+
+  .contact-item span {
+    font-size: 14px;
+  }
+
+  .contact-item a {
+    font-size: 17px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 15px;
+  }
+
+  /* Buttons */
+  .hero-btn,
+  .about-btn,
+  .nav-button,
+  .footer-button {
+    font-size: 16px;
+  }
+
+  /* Footer */
+  .footer-bottom {
+    font-size: 15px;
+  }
 }
