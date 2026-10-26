@@ -3,7 +3,7 @@ const projects = [
     title: 'Goraya Wear — Fashion E-commerce Store',
     description:
       'A premium women clothing store built with WordPress and WooCommerce, featuring product categories, online shopping functionality and on-page SEO setup.',
-    technologies: ['WordPress' · 'WooCommerce' · 'Woostify '· 'Rank Math SEO'],
+    technologies: ['WordPress' , 'WooCommerce', 'Woostify ', 'Rank Math SEO'],
     live: 'https://gorayawear.com/',
   },
   {
