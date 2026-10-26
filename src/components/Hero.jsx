@@ -80,7 +80,7 @@ function Hero() {
 
       <div className="hero-image">
         <div className="image-circle">
-          <img src="/profile.png" alt="Malaika Nadeem" />
+          <img src="/malaika.png" alt="Malaika Nadeem" />
         </div>
       </div>
 
